@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html >
+<head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+</head>
+
+
+<body class="container-fluid" ng-app="gmsManagement">
+    <div ng-view="" hidden></div>
+
+    <ps-framework name="First Title"
+                  subtitle="Subtilte"
+                  icon-file="">
+        <ps-menu ></ps-menu>
+    </ps-framework>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/system/scripts")
+
+    @Scripts.Render("~/bundles/SYSTEM/framework/scripts")
+    <script src="~/Content/SYSTEM/common/services/common.services.js"></script> 
+    <script src="~/Content/SYSTEM/common/services/sidebarService.js"></script>
+
+    <script src="~/Scripts/angular-resource.js"></script>
+   
+    <!-- Angular cookie wrapper library for client cookies -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-cookies.js"></script>
+
+   
+
+
+    <!-- Auth0 Lock script and AngularJS module -->
+    <script src="//cdn.auth0.com/js/lock-9.1.min.js"></script>
+    <!-- angular-jwt and angular-storage -->
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+
+    <script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+
+    @Styles.Render("~/bundles/bootstrap")
+    @Styles.Render("~/bundles/system/core/styles")
+    @Styles.Render("~/bundles/system/app/styles")
+
+</body>
+
+</html>

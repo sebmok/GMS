@@ -1,0 +1,37 @@
+﻿<div class="ps-menu-area"
+     ng-init="loadSidebar()"
+     ng-show="showMenu"
+     ng-class="{'ps-menu-area-vertical ps-fade-in-animation': isVertical, 'ps-menu-area-horizontal': !isVertical }">
+    
+    <ul class="ps-menu">
+        
+        <ps-menu-item label="{{menu.navName}}"
+                      icon="{{menu.glClass}}"
+                      route="{{menu.navAction}}"
+                      ng-if="(siteMenu | filter:{parent : menu.muncui}).length < 1"
+                      ng-repeat="menu in siteMenu | filter: {parent : '!'} | orderBy: 'displayOrder'">
+        </ps-menu-item>
+
+        <ps-menu-group label="{{menu.navName}}" 
+                       icon="{{menu.glClass}}"
+                       route="{{menu.navAction}}"   
+                       ng-if="(siteMenu | filter:{parent : menu.muncui}).length > 0"                    
+                       ng-repeat="menu in siteMenu | filter: {parent : '!'} | orderBy: 'displayOrder'">
+            
+            <ps-menu-item label="{{menu.navName}}"
+                          icon="{{menu.glClass}}"
+                          route="{{menu.navAction}}"                        
+                          ng-repeat="menu in siteMenu | filter:{parent : menu.muncui} | orderBy: 'displayOrder'">
+            </ps-menu-item>
+        </ps-menu-group>
+    </ul>
+
+    <a class="btn btn-sm ps-menu-layout-button"
+       ng-show="allowHorizontalToogle"
+       ng-class="{'ps-lauout-button-horizontal': !isVertical }"
+       ng-click="toggleMenuOrientation()">
+        <i class="fa"
+           ng-class="{'fa-chevron-up': isVertical, ' fa-chevron-left': !isVertical}"></i>
+
+    </a>
+</div>

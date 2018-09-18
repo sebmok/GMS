@@ -1,0 +1,28 @@
+﻿<div class="widget-customers">
+    <div class="widget-customers-heading">
+        <span class="widget-customers-title"> Customers </span>
+    </div>
+    <div class="widget-customers-actionbar">
+        <div class="widget-customers-actionbar-header">
+            <div class="widget-customers-actionbar-buttons">
+                <button class="btn btn-danger btn-sm pull-right" ng-click="deleteContractor()">
+                    <span><i class="fa fa-plus" />&nbsp;&nbsp;&nbsp;Delete</span>
+                </button>
+                <button class="btn btn-success btn-sm pull-right" ng-click="addNewContractor()">
+                    <span><i class="fa fa-plus" />&nbsp;&nbsp;&nbsp;New</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget-customers-body">
+        <div class="widget-customers-row">
+            <div class="widget-customers-name-area">
+                <h4>Customer Name</h4>
+                <p> {{ selectedEmployee.name }} </p>
+                <h4>Local asdasd</h4>
+                <p> {{ selectedEmployee.location }}</p>
+            </div>
+        </div>
+    </div>
+</div>

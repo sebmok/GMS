@@ -1,0 +1,44 @@
+﻿<nav class="nav navbar-fixed-top">
+    <div class="ps-title-bar"
+         ng-init="loadActionBar()">
+        <div class="row">
+            <div class="ps-logo-area col-sm-3">
+                <img class="ps-icon" ng-src="{{ iconFile }}" />
+                <div class="ps-title-area">
+                    <p class="ps-logo-title">{{ title }}</p>
+                    <p class="ps-logo-subtitle">{{ subtitle }}</p>
+                    <p class="ps-logo-tooltip">Logo tooltip</p>
+                </div>
+
+                <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()"
+                     class="ps-collapsed-menu fa-pull-right">
+                    <button type="button" class="btn ps-nav-button">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="ps-right-side-controls col-sm-9">
+                <div>
+                    <ul class="nav navbar-nav navbar-right nav-pills">
+                        <li ng-repeat="action in actionBar  | orderBy: 'displayOrder'"><a href="">{{action.gName}}&nbsp;&nbsp;<i class="dropdown dropdown-toggle {{action.gClass}}" style="color:blue"></i></a></li>
+                        
+                        
+                        <li><a href="">{{auth.profile.email}} &nbsp;<i class="dropdown dropdown-toggle glyphicon glyphicon-user" style="color:blue"></i></a></li>
+                        <li><button class="btn btn-sm btn-warning pull-right" ng-click="logout()">Logout&nbsp;&nbsp;<i class="glyphicon glyphicon-off" style="color:red; align-items:flex-end"></i></button></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div ng-transclude></div>
+</nav>
+    <div ng-view class="ps-view" ng-class="{'ps-view-full-width' : !isMenuVertical || !isMenuVisible}">
+    </div>
+
+
+

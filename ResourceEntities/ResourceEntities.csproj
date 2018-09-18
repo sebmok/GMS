@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAB886E6-1EAC-406B-994F-519EE6E2F10C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ResourceEntities</RootNamespace>
+    <AssemblyName>ResourceEntities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboAbonamentDict.cs" />
+    <Compile Include="aboAbonamentServicesDedicated.cs" />
+    <Compile Include="aboAbonamentServicesDefault.cs" />
+    <Compile Include="aboAbonamentServiceTemplateDict.cs" />
+    <Compile Include="aboPaymentMethodDict.cs" />
+    <Compile Include="aboPaymentTerminDict.cs" />
+    <Compile Include="aboServiceDefaultPricesDict.cs" />
+    <Compile Include="aboServicesDict.cs" />
+    <Compile Include="BankAccountTypesDict.cs" />
+    <Compile Include="BankAccountUsageTypeDict.cs" />
+    <Compile Include="BankCountry.cs" />
+    <Compile Include="BankDict.cs" />
+    <Compile Include="CitiesDict.cs" />
+    <Compile Include="ContractorTypesDict.cs" />
+    <Compile Include="CotrolButtonDict.cs" />
+    <Compile Include="Countries.cs" />
+    <Compile Include="CountryCurrencies.cs" />
+    <Compile Include="CountryLanguages.cs" />
+    <Compile Include="CurrencyDicts.cs" />
+    <Compile Include="DataMemberBankAccounts.cs" />
+    <Compile Include="Errors.cs" />
+    <Compile Include="FieldTypesDicts.cs" />
+    <Compile Include="FormConfigTemplates.cs" />
+    <Compile Include="FormConfigTemplatesGlobalNameDict.cs" />
+    <Compile Include="FormDefaultConfig.cs" />
+    <Compile Include="FormFieldsClassesDict.cs" />
+    <Compile Include="FormFieldsGlobalNameDict.cs" />
+    <Compile Include="FormGlobalNameDict.cs" />
+    <Compile Include="FormGroupsGlobalNameDict.cs" />
+    <Compile Include="GlyphGlobalNameDict.cs" />
+    <Compile Include="GlyphsDicts.cs" />
+    <Compile Include="IdentitiesDict.cs" />
+    <Compile Include="IdentitiesGlobalNameDict.cs" />
+    <Compile Include="IdentityTypeDict.cs" />
+    <Compile Include="InterfaceArrDict.cs" />
+    <Compile Include="InterfaceMethodsDict.cs" />
+    <Compile Include="InterfaceParamsDict.cs" />
+    <Compile Include="InterfaceStruArrConf.cs" />
+    <Compile Include="InterfaceStructureDict.cs" />
+    <Compile Include="InterfaceUrlDict.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceNumberCombinationTemplate.cs" />
+    <Compile Include="InvoicePosition.cs" />
+    <Compile Include="Languages.cs" />
+    <Compile Include="MemberContractorUser.cs" />
+    <Compile Include="MemberEmails.cs" />
+    <Compile Include="MemberIdentity.cs" />
+    <Compile Include="MemberIds.cs" />
+    <Compile Include="Members.cs" />
+    <Compile Include="MemberUserNavConfigs.cs" />
+    <Compile Include="MemberUserQuickMenus.cs" />
+    <Compile Include="MemberUsers.cs" />
+    <Compile Include="NavConfigTemplates.cs" />
+    <Compile Include="NavConfigTemplatesGlobalNameDict.cs" />
+    <Compile Include="PostCodesDict.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvidersDict.cs" />
+    <Compile Include="ProvincesDict.cs" />
+    <Compile Include="StreetsDict.cs" />
+    <Compile Include="SysImportMappingPosition.cs" />
+    <Compile Include="SysImportPositions.cs" />
+    <Compile Include="SysImportTemplate.cs" />
+    <Compile Include="Tenant.cs" />
+    <Compile Include="UserContractors.cs" />
+    <Compile Include="UserLoginProvider.cs" />
+    <Compile Include="UserLogins.cs" />
+    <Compile Include="UserPasswordHistory.cs" />
+    <Compile Include="Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
